@@ -13,6 +13,21 @@ Deploying webapp on heroku:
 	create requirements.txt: pip freeze > requirements.txt
 	create Procfile:
 		web: gunicorn simple_flask_app.py:app
+	check available python runtimes 'google.com: devcenter.heroku.com python runtimes' and create runtime.txt:
+		python-3.6.6
+	create git repository:
+		git init
+		git add .
+		git commit -m "first commit"
+	push source to remote repository:
+		heroku git:remote --app my1flaskapp
+	configure git:
+		git config --global user.email "timfirst@gmail.com"
+		git config --global user.name "Tim First"
+	get token for deploying:
+		heroku auth:token
+	git push heroku master
+	show info about website: heroku info
 
 '''
 
