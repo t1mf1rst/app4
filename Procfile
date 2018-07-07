@@ -1,1 +1,1 @@
-web: gunicorn simple_flask_website.py:app
+web: gunicorn simple_flask_website:app

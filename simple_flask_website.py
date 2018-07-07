@@ -12,7 +12,7 @@ Deploying webapp on heroku:
 	install gunicorn: pip install gunicorn
 	create requirements.txt: pip freeze > requirements.txt
 	create Procfile:
-		web: gunicorn simple_flask_app.py:app
+		web: gunicorn simple_flask_app:app
 	check available python runtimes 'google.com: devcenter.heroku.com python runtimes' and create runtime.txt:
 		python-3.6.6
 	create git repository:
